@@ -29,7 +29,7 @@ function draw(){
   // this function runs again and again (60x per second)
   background(0,0,180); // 
   
-  fill ("0"); // black text
+  fill ("bodyColor"); // black text
   text ("Click the mouse to move panda!", 50, 50);  
   
   // add your image drawing code here
@@ -51,7 +51,7 @@ function draw(){
 
   // Panda's head
   fill(255);
-  ellipse (0, d, d)
+  ellipse (0, 100, 150)
 
   // Panda's cheeks
   fill (255); // white cheeks
