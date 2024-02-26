@@ -49,14 +49,30 @@ function draw(){
   translate (x,y); // shift original point
     // shapes are relative to (0,0) 
 
-  //Panda's head
-  fill(bodycolor);
+  // Panda's head
+  fill(255);
   ellipse (0, d, d)
 
-  //Panda's face 
+  // Panda's cheeks
+  fill (255); // white cheeks
+  ellipse (); // cheek 2
+  ellipse (); // cheek 1
 
+  // Panda's nose
+  fill (bodyColor); // nose is black
+  triangle (); // white nose
 
+  // Panda's eyes
+  fill (bodyColor); 
+  ellipse (); // right eye
+  ellipse (); // left eye
 
+  // Panda's ears
+  fill (bodyColor)
+  arc (); // right ear
+  arc (); // left ear
+
+  
 /** 
  * the mousePressed() function is separate from draw(). 
  * It only runs (one time) if the mouse is clicked
