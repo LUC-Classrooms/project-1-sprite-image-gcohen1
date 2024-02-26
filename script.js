@@ -9,6 +9,7 @@
 
 // Global Variables go here
 // These variables will define the location of the panda
+translate(x, y); // x and y are declared and initialized properly
 var x; //horizontal location 
 var y = 100
 var d = 150 
