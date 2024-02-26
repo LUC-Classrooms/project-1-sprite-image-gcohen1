@@ -51,21 +51,21 @@ function draw(){
 
   // Panda's head
   fill(255);
-  ellipse (0, 100, 150)
+  ellipse (50, 10 ,100)
 
   // Panda's cheeks
   fill (255); // white cheeks
-  ellipse (); // cheek 2
-  ellipse (); // cheek 1
+  ellipse (21, 23 , 20); // cheek 2
+  ellipse (80, 23 , 20); // cheek 1
 
   // Panda's nose
-  fill (bodyColor); // nose is black
-  triangle (); // white nose
+  fill (0); // nose is black
+  triangle (50, 10 , 60); // black nose
 
   // Panda's eyes
   fill (bodyColor); 
-  ellipse (); // right eye
-  ellipse (); // left eye
+  ellipse (21, 10 , 20); // right eye
+  ellipse (21, 10 , 20); // left eye
 
   // Panda's ears
   fill (bodyColor)
