@@ -27,7 +27,7 @@ function setup(){
 
 function draw(){
   // this function runs again and again (60x per second)
-  background(0,0,180); // 
+  background(0,0,50); // 
   
   fill ("bodyColor"); // black text
   text ("Click the mouse to move panda!", 50, 50);  
@@ -55,17 +55,17 @@ function draw(){
 
   // Panda's cheeks
   fill (255); // white cheeks
-  ellipse (21, 23 , 20); // cheek 2
-  ellipse (80, 23 , 20); // cheek 1
+  ellipse (21, 23 , 15); // cheek 2
+  ellipse (80, 23 , 15); // cheek 1
 
   // Panda's nose
   fill (0); // nose is black
   triangle (50, 10 , 60); // black nose
 
   // Panda's eyes
-  fill (bodyColor); 
-  ellipse (21, 10 , 20); // right eye
-  ellipse (21, 10 , 20); // left eye
+  fill (0);  
+  ellipse (25, 4 , 20); // right eye
+  ellipse (76, 4 , 20); // left eye
 
   // Panda's ears
   fill (bodyColor)
