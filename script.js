@@ -13,7 +13,7 @@ translate(x, y); // x and y are declared and initialized properly
 var x; //horizontal location 
 var y = 100
 var d = 150 
-var bodyColor = 0; //black
+var bodyColor = 255; //black
  
 
 function setup(){
