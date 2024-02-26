@@ -18,7 +18,7 @@ var bodyColor = 0; //black
 
 function setup(){
   // this function will run once
-  createCanvas(800, 400); // create a 600x400 pixel drawing canvas
+  createCanvas(600, 400); // create a 600x400 pixel drawing canvas
   x = width / 5; // initial location
   y = height / 2; 
     // set x speed:
@@ -77,6 +77,6 @@ function draw(){
  * the mousePressed() function is separate from draw(). 
  * It only runs (one time) if the mouse is clicked
 */
-function mousePressed(){
+function mousePressed() {}
   // add code here if you want something to execute once each time the mouse is pressed
 }
