@@ -29,8 +29,8 @@ function draw(){
   // this function runs again and again (60x per second)
   background(0,0,180); // 
   
-  fill ("blue"); // blue text
-  text ("click the mouse to move panda", 20, 50);  
+  fill ("bodyColor"); // black text
+  text ("Click the mouse to move panda!", 50, 50);  
   
   // add your image drawing code here
 
