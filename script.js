@@ -2,7 +2,7 @@
     Your Name; Gracie Cohen
     Completion date;
     Basic description of the image; A panda (going toward bamboo?)
-    Basic description of user interactions to expect;
+    Basic description of user interactions to expect; click the mouse for the panda to move
     Citations of any code sources used for reference;
     */
 
