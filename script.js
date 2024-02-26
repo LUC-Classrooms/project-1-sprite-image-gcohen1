@@ -13,7 +13,7 @@ translate(x, y); // x and y are declared and initialized properly
 var x; //horizontal location 
 var y = 100
 var d = 150 
-var bodyColor = 255; //black
+var bodyColor = 0; //black
  
 
 function setup(){
@@ -29,7 +29,7 @@ function draw(){
   // this function runs again and again (60x per second)
   background(0,0,180); // 
   
-  fill ("bodyColor"); // black text
+  fill ("0"); // black text
   text ("Click the mouse to move panda!", 50, 50);  
   
   // add your image drawing code here
