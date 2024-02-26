@@ -13,7 +13,7 @@ translate(x, y); // x and y are declared and initialized properly
 var x; //horizontal location 
 var y = 100
 var d = 150 
-var bodyColor = 0; //black
+var bodyColor = 255; // white
 var angle = 0; // rotation 
 var rotationSpeed = 0; 
 var ySpeed, xSpeed; // set speed in 2 dimensions 
@@ -33,23 +33,38 @@ function setup(){
 
 function draw(){
   // this function runs again and again (60x per second)
-  background(0,0,580); // 
+  background(0,80,0); // 
   
   fill ("bodyColor"); // black text
-  text ("Click the mouse to move panda!", 50, 50);  
+  text ("Click the mouse to change the cheek color!", 50, 50);  
   
   // add your image drawing code here
 
 /* 
   Use the following if()...else() structure to incorporate mouse click control of your animation
 */
-  if(mouseIsPressed){
-  fill (255); 
-  rect (100,100,20); 
-  } else {
-    
-  }
 
+    if(mouseIsPressed){
+      bodyColor = (200) ; // 
+    } else {
+      bodyColor = 255 ; // white
+    }
+  
+    x = x + xSpeed; // update location each frame
+    y += ySpeed; // add the speed factor to the location value
+    angle += rotationSpeed; // update angle each frame
+ 
+   //if x is more than the width of the canvas OR less than zero, change horizontal direction
+   if(x > width || x < 0){
+     xSpeed = xSpeed * -1; // reverse direction by multiplying xSpeed by 0
+   }
+ 
+   //if y is more than the height of the canvas OR less than zero, change vertical direction
+   if(y > height || y < 0){
+     ySpeed = ySpeed * -1; // reverse direction by multiplying xSpeed by 0
+   }
+
+  
   // Make panda
 
   push(); // create new drawing layer
@@ -58,10 +73,11 @@ function draw(){
 
   // Panda's head
   fill(255);
+  strokeWeight (3);
   ellipse (50, 10 ,100)
 
   // Panda's cheeks
-  fill (255); // white cheeks
+  fill (bodyColor); // white cheeks
   strokeWeight (2);
   ellipse (21, 25 , 14); // cheek 2
   ellipse (80, 25 , 14); // cheek 1
@@ -80,16 +96,20 @@ function draw(){
   ellipse (77, -42 , 24); // right ear
   ellipse (24, -42 , 24); // left ear
 
-  
-  //do this one time when the mouse is clicked:
-function mousePressed(){
-  // choose a new trajectory
-  xSpeed = random(-3, 3);
-  ySpeed = random(-3, 3);
-  rotationSpeed = random(-0.1, 0.1);
-}
+  // Bamboo
+  fill (0, 255, 0); 
+  rect (150,60,20); 
+  rect (150,40,20); 
+  rect (150,20,20); 
+  rect (150,0,20); 
+  rect (150,-20,20); 
+  rect (150,-40,20); 
+  rect (150,-60,20);
+  rect (150,-80,20); 
+  rect (150,-100,20);
+  rect (150,-120,20);
 
-  
+
 /** 
  * the mousePressed() function is separate from draw(). 
  * It only runs (one time) if the mouse is clicked
