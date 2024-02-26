@@ -14,6 +14,10 @@ var x; //horizontal location
 var y = 100
 var d = 150 
 var bodyColor = 0; //black
+var angle = 0; // rotation 
+var rotationSpeed = 0; 
+var ySpeed, xSpeed; // set speed in 2 dimensions 
+
  
 
 function setup(){
@@ -21,13 +25,15 @@ function setup(){
   createCanvas(600, 400); // create a 600x400 pixel drawing canvas
   x = width / 5; // initial location
   y = height / 2; 
-    // set x speed:
-    xSpeed = random (-4,4); // horizontal speed
-}
+    // set x and y speed:
+    xSpeed = random (-2,2); // horizontal speed
+    ySpeed = random(-2, 2); // pick a vertical speed
+  }
+
 
 function draw(){
   // this function runs again and again (60x per second)
-  background(0,0,50); // 
+  background(0,0,580); // 
   
   fill ("bodyColor"); // black text
   text ("Click the mouse to move panda!", 50, 50);  
@@ -38,9 +44,10 @@ function draw(){
   Use the following if()...else() structure to incorporate mouse click control of your animation
 */
   if(mouseIsPressed){
-    cheekColor = (128,0,0); // maroon
+  fill (255); 
+  rect (100,100,20); 
   } else {
-    cheekColor = 255; // white
+    
   }
 
   // Make panda
@@ -55,8 +62,9 @@ function draw(){
 
   // Panda's cheeks
   fill (255); // white cheeks
-  ellipse (21, 23 , 15); // cheek 2
-  ellipse (80, 23 , 15); // cheek 1
+  strokeWeight (2);
+  ellipse (21, 25 , 14); // cheek 2
+  ellipse (80, 25 , 14); // cheek 1
 
   // Panda's nose
   fill (0); // nose is black
@@ -68,9 +76,18 @@ function draw(){
   ellipse (76, 4 , 20); // left eye
 
   // Panda's ears
-  fill (bodyColor)
-  arc (); // right ear
-  arc (); // left ear
+  fill (0); 
+  ellipse (77, -42 , 24); // right ear
+  ellipse (24, -42 , 24); // left ear
+
+  
+  //do this one time when the mouse is clicked:
+function mousePressed(){
+  // choose a new trajectory
+  xSpeed = random(-3, 3);
+  ySpeed = random(-3, 3);
+  rotationSpeed = random(-0.1, 0.1);
+}
 
   
 /** 
