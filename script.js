@@ -63,7 +63,7 @@ function draw(){
    if(y > height || y < 0){
      ySpeed = ySpeed * -1; // reverse direction by multiplying xSpeed by 0
    }
-
+// credit Dr. Wetzel for code above 
   
   // Make panda
 
